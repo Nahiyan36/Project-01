@@ -3,17 +3,8 @@ const cll=(amm)=>{
     return elem.join('  ');
 }
 
-manage=(nm)=>{
-if(nm===true){
-    document.getElementById('j').classList.remove('hidden')
-    document.getElementById('word-container').classList.add('hidden')
-}
-else{
-    document.getElementById('j').classList.add('hidden')
-    document.getElementById('word-container').classList.remove('hidden')
 
-}
-}
+
 
 
 
@@ -58,7 +49,7 @@ const lessonShow=(id)=>{
 // ],
 
 const loadWordDetail= async(id)=>{
-    manage(true)
+ 
     const url=`https://openapi.programming-hero.com/api/word/${id}`
     // console.log(url)
     const res=await fetch(url);
@@ -114,7 +105,7 @@ const fi=(info)=>{
        `
        cre.appendChild(done)
     });
-manage(false)
+
 }
 
 const jsonReal=(dat)=>{
